@@ -1,11 +1,13 @@
 * {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Acme', sans-serif;
     margin-top: 0;
     box-sizing: border-box;
 }
 
-body {
-    max-width: 320px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header {
@@ -14,14 +16,29 @@ body {
     text-align: center;
 }
 
-.top-nav-link {
+.top-nav {
+    list-style: none;
+}
+
+.top-nav li {
+    margin: 1em 0;
+    width: 90%;
+}
+
+.top-nav li a {
     color: black;
-    text-decoration: none;
+    text-decoration: none;  
+    background-color: white;
+    padding: .25em 0;
+    display: block;
+}
+
+.top-nav li a:hover {
+    background-color: aqua;
 }
 
 h1 {
     width: 90%;
-    /* text-align: center; */
     font-weight: bolder;
     font-size: 2.5em;
 }
@@ -101,7 +118,7 @@ footer {
 }
 
 hr {
-    border: 1 px solid grey;
+    border: 1px solid grey;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -131,12 +148,9 @@ hr {
 }
 
 @media only screen and  (min-width: 768px) {
-    .container {
-        width: 768px;
-    }
 
     .header {
-        height: 375px;
+        height: 275px;
         text-align: center;
     }
 
@@ -159,9 +173,15 @@ hr {
         font-size: 2rem;
     }
 
-    .contact-list-item {
-        display: inline-block;
+    .top-nav li {
+        text-align: center;
+        display: inline;
+        padding: 1em;
+    }
+
+    .top-nav li a {
         background-color: transparent;
+        display: inline;
     }
 
     .profile-pic {
@@ -181,7 +201,6 @@ hr {
         
     .main {
         display: inline-block;
-        min-width: 768px;
         background-color: transparent;
     }
 
@@ -229,7 +248,7 @@ hr {
         text-decoration: none;
     }
 
-    .nav-link:hover, .top-nav-link:hover {
+    .nav-link:hover {
         cursor: pointer;
         background-color: aqua;
         transition: .2s;
@@ -244,14 +263,6 @@ hr {
     }
 
     @media only screen and (min-width: 1024px) {
-        .container {
-            width: 100vw;
-        }
-
-        .main {
-            width: 100%;
-            
-        }
 
         .header {
             height: 425px;;
@@ -262,8 +273,15 @@ hr {
         float: left;
     }
 
-        nav {
-            padding-right: 1em;;
+        h1 {
+            text-align: left;
+            float: left;
+            padding-left: 1em;
+        }
+
+        .top-nav {
+            float: right;
+            margin-top: -65px;
         }
 
     }
